@@ -31,4 +31,4 @@ python3 wp-validator.py example-domains.txt found.txt 10
 
 
 ## Notes
-I would recommend limiting the number of threads to no more than 10, sometimes websites utilize CDN services like Cloudflare and it can pose challenges in obtaining precise and reliable results. Script may not be 100% accurate, I am looking into new ways of improving it, If you have any suggestions I would encourage you to share them without hesitation.
+I would recommend limiting the number of threads to no more than 10, sometimes websites utilize CDN services like Cloudflare and it can pose challenges in obtaining precise and reliable results. Script may not be 100% accurate, I am looking into new ways of improving it, If you have any suggestions I would encourage you to share them without hesitation. Also the script follows and saves on the output file all redirects.
