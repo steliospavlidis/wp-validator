@@ -9,26 +9,34 @@ The WP-Validator is a powerful Python script designed to assist you in filtering
 3) If wp-admin or wp-login is present
 
 
-## Install the following packages by entering
+## Requirements
 
-```
-pip3 install asyncio aiohttp tqdm
+Python 3.8 or newer (tested up to 3.14). Install the dependencies with:
+
+```bash
+pip3 install -r requirements.txt
 ```
 
-## Run the script by entering
-```
+## Usage
 
+```bash
 python3 wp-validator.py [input_file] [output_file] [threads]
 ```
 
-```
+Example:
 
+```bash
 python3 wp-validator.py example-domains.txt found.txt 10
 ```
+
+The input file has one domain or URL per line. Domains without `http://` or `https://` are checked over `http://` first and follow any redirects.
 ## Result
 
 ![run](https://github.com/steliospavlidis/wp-validator/assets/138578903/4ab5266f-b897-4c38-8dd3-3652b1b8f36f)
 
 
 ## Notes
-I would recommend limiting the number of threads to no more than 10, sometimes websites utilize CDN services like Cloudflare and it can pose challenges in obtaining precise and reliable results. Script may not be 100% accurate, I am looking into new ways of improving it, If you have any suggestions I would encourage you to share them without hesitation. Also the script follows and saves on the output file all redirects.
+
+- I recommend no more than 10 threads. Sites behind CDNs like Cloudflare can make results less reliable.
+- The output file contains the **final URL** of each WordPress site after following redirects.
+- The script may not be 100% accurate. Suggestions are welcome, so feel free to open an issue.
